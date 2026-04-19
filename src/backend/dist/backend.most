@@ -1,0 +1,47 @@
+// Version: 1.0.0
+type AlarmRecord__849436050 =
+  {
+    id : Text;
+    isEnabled : Bool;
+    name : Text;
+    repeatDays : [Nat];
+    requireMathProblem : Bool;
+    timeHour : Nat;
+    timeMinute : Nat
+  };
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type PinnedZone__607531409 =
+  {cityName : Text; countryCode : Text; id : Text; timezone : Text};
+type TimerPreset__543843413 =
+  {category : Text; durationSeconds : Nat; id : Text; name : Text};
+type UserSettings__494227915 = {use24HourFormat : Bool};
+actor {
+  stable alarms :
+    {
+      var root : Node__46230540<Text, AlarmRecord__849436050>;
+      var size : Nat__490723111
+    };
+  stable pinnedZones :
+    {
+      var root : Node__46230540<Text, PinnedZone__607531409>;
+      var size : Nat__490723111
+    };
+  stable timerPresets :
+    {
+      var root : Node__46230540<Text, TimerPreset__543843413>;
+      var size : Nat__490723111
+    };
+  stable userSettings :
+    {
+      var root : Node__46230540<Text, UserSettings__494227915>;
+      var size : Nat__490723111
+    }
+};

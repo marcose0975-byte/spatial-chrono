@@ -1,0 +1,39 @@
+type UserSettings = record {use24HourFormat: bool;};
+type TimerPreset = 
+ record {
+   category: text;
+   durationSeconds: nat;
+   id: text;
+   name: text;
+ };
+type PinnedZone = 
+ record {
+   cityName: text;
+   countryCode: text;
+   id: text;
+   timezone: text;
+ };
+type AlarmRecord = 
+ record {
+   id: text;
+   isEnabled: bool;
+   name: text;
+   repeatDays: vec nat;
+   requireMathProblem: bool;
+   timeHour: nat;
+   timeMinute: nat;
+ };
+service : {
+  addPinnedZone: (zone: PinnedZone) -> ();
+  deleteAlarm: (id: text) -> ();
+  deleteTimerPreset: (id: text) -> ();
+  getAlarms: () -> (vec AlarmRecord) query;
+  getPinnedZones: () -> (vec PinnedZone) query;
+  getTimerPresets: () -> (vec TimerPreset) query;
+  getUserSettings: () -> (UserSettings) query;
+  removePinnedZone: (id: text) -> ();
+  saveAlarm: (alarm: AlarmRecord) -> ();
+  saveTimerPreset: (preset: TimerPreset) -> ();
+  saveUserSettings: (settings: UserSettings) -> ();
+  toggleAlarm: (id: text, enabled: bool) -> ();
+}

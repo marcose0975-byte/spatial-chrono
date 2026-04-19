@@ -1,0 +1,27 @@
+{
+  "overview": "A premium multi-functional clock app with a visionOS-inspired Liquid Glass aesthetic. Features four modules — World Clock, Alarm, Stopwatch, and Timer — wrapped in deep glassmorphism with specular rim lighting, vibrancy text hierarchy, and fluid animations. Persistent backend storage keeps your alarms, pinned time zones, and timer presets safe across sessions.",
+  "features": [
+    "World Clock with searchable city list and pinnable time zones",
+    "Alarms with math-problem dismissal to prevent accidental snoozing",
+    "High-precision stopwatch with color-coded lap history",
+    "Multiple concurrent timers with Pomodoro and Tabata presets",
+    "Liquid Glass glassmorphism UI with specular rim lighting and vibrancy text hierarchy",
+    "Pill-shaped bottom navigation bar with animated SF-style icons",
+    "12/24-hour format toggle",
+    "Fullscreen countdown mode for focused timer use",
+    "Persistent backend storage with localStorage fallback"
+  ],
+  "category": "productivity",
+  "tags": [
+    "clock",
+    "timer",
+    "stopwatch",
+    "alarm",
+    "glassmorphism",
+    "visionos",
+    "productivity",
+    "spatial",
+    "dark-mode"
+  ],
+  "last_updated": "2026-04-19T15:40:35.159Z"
+}
